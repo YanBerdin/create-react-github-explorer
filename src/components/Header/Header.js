@@ -1,4 +1,4 @@
-// import "./Header.scss";
+ import "./Header.css";
 
 import { Image } from "semantic-ui-react";
 
