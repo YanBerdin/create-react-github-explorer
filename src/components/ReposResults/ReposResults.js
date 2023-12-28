@@ -33,6 +33,7 @@ function ReposResults({ repositories }) {
                 // avatar={true}
                 floated="right"
                 src={repository.owner.avatar_url}
+                alt="Avatar de l'utilisateur sur Github"
                 wrapped={false}
               />
               <Card.Header>{repository.name} </Card.Header>
