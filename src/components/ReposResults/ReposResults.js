@@ -26,7 +26,7 @@ function ReposResults({ repositories }) {
             rel="noopener noreferrer"
             className="Card"
           >
-            <Card.Content>
+            <Card.Content className="Content">
               <Image
                 // className="avatar"
                 size="tiny"
@@ -44,7 +44,7 @@ function ReposResults({ repositories }) {
                 <Icon name="user" /> {repository.owner.login}
               </Card.Meta>
               <Card.Meta>{repository.owner.type}</Card.Meta>
-              <Card.Description>{repository.description}</Card.Description>
+              <Card.Description className="Description">{repository.description}</Card.Description>
             </Card.Content>
           </Card>
         ))}
