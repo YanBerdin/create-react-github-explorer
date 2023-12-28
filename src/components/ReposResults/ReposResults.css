@@ -5,7 +5,7 @@
 }
 
 .Card {
-  min-width: 280px;
+  min-width: 250px;
   min-height: 300px;
   overflow: hidden;
 }
@@ -15,6 +15,6 @@
   overflow: hidden;
 }
 .Content {
-  max-height: 300px;
+  max-height: 250px;
   min-height: 200px;
 }
