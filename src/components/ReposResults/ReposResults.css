@@ -1,0 +1,12 @@
+.CardGroup {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+   }
+  
+.Card {
+  min-width: 250px;
+  max-height:200px;
+  overflow: hidden;
+}
