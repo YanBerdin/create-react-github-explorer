@@ -1,0 +1,77 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-image {
+  max-width: 80%;
+  min-width: 200px;
+}
+
+
+/* .app {
+  margin: 0rem;
+  background-color: rgb(8, 8, 8);
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+span {
+  font-size: 30px;
+  color: rgb(15, 7, 237);
+  max-width: 16px;
+  vertical-align: -15%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.ui-loader {
+  min-height: 350px;
+} */
+
+// CSS de create react app :
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
