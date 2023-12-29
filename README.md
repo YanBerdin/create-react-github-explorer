@@ -1,4 +1,4 @@
-# Github Repositories Explorer
+# `Github Repositories Explorer`
 
 This is a starter template for a Github Repositories Explorer project built with **React.js**, **Semantic UI**.
 
@@ -6,9 +6,9 @@ This is a starter template for a Github Repositories Explorer project built with
 This project hosted at : https://new-react-github-explorer.vercel.app/
 
 ### `Prerequisites`
-Make sure you have the following installed Node.js (version >= 16.8)
+Make sure you have the following installed Node.js.
 
-### `## Getting Started`
+### `Getting Started`
 Follow the steps below to get started with this template:
 
 Clone this repository
