@@ -86,10 +86,8 @@ function App() {
             element={
               loading ? (
                 <Segment className="ui-loader">
-                  <Dimmer active>
-                    <Loader size="huge">
-                      <section>Loading</section>
-                    </Loader>
+                  <Dimmer active inverted>
+                    <Loader size="large"active inline='centered'>Loading</Loader>
                   </Dimmer>
                 </Segment>
               ) : (
