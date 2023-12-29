@@ -21,7 +21,7 @@ function SearchBar({ newSearch, setNewSearch, loadRepositories }) {
           name="search-form"
           // icon="search"
           action={{ icon: "search" }}
-          // iconPosition="left"
+          size="small"
           actionPosition="left"
           placeholder="Search..."
           value={newSearch} // sanitized by React

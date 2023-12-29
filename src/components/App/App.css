@@ -13,33 +13,18 @@
   background-color: rgb(8, 8, 8);
 }*/
 
-p {
-  font-size: 1.1rem;
-}
-
-span {
-  font-size: 30px;
-  color: rgb(15, 7, 237);
-  max-width: 16px;
-  vertical-align: -15%;
-}
-
 .pagination {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 1rem 1rem 1rem;
+  justify-content: center;
+  padding: 0rem;
 }
 
 .ui-loader {
-  min-height: 350px;
-} 
-
-
-.App {
-  text-align: center;
+  min-height: 400px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+span {
+  font-size: 2rem;
+  color: rgb(15, 7, 237);
+  vertical-align: -10%;
 }

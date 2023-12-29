@@ -4,9 +4,10 @@ import {
   Container,
   Menu,
   Segment,
-  Button,
+  // Button,
   Dimmer,
   Loader,
+  Pagination,
 } from "semantic-ui-react";
 
 import { NavLink, Route, Routes } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
   const [repositoriesError, setRepositoriesError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   const segmentStyle = {
     margin: "0",
@@ -43,7 +45,11 @@ function App() {
       setRepositories(response.data.items);
       // MAJ Nbre de repos dans State
       setTotalCount(response.data.total_count);
-
+      // MAJ du Nbre de pages nécéssaires à l'affichage de tous les résultats
+      // arrondi à l’entier supérieur
+      setTotalPages(Math.ceil(response.data.total_count / 30));
+      console.log(totalPages);
+      console.log(response);
       // console.log(response.data.items);
       // console.log(repositories);
     } catch (error) {
@@ -64,6 +70,10 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]); // Surveiller la modification de currentpage en le passant en 2eme paramètre à useEffect()
 
+  const handlePaginationChange = (e, { activePage }) => {
+    setCurrentPage(activePage);
+  };
+
   return (
     <Container fluid className="app">
       <Segment>
@@ -77,9 +87,6 @@ function App() {
           </Menu.Item>
         </Menu>
 
-        {/* </Segment>
-      <ReposResults repositories={repositories} /> */}
-
         <Routes>
           <Route
             path="/"
@@ -87,7 +94,9 @@ function App() {
               loading ? (
                 <Segment className="ui-loader">
                   <Dimmer active inverted>
-                    <Loader size="large"active inline='centered'>Loading</Loader>
+                    <Loader size="huge" active inline="centered">
+                      Loading
+                    </Loader>
                   </Dimmer>
                 </Segment>
               ) : (
@@ -113,6 +122,21 @@ function App() {
                     <>
                       <ReposResults repositories={repositories} />
                       <div className="pagination">
+                        <>
+                          <Pagination
+                            className="pagination"
+                            defaultActivePage={currentPage}
+                            totalPages={totalPages}
+                            onPageChange={handlePaginationChange}
+                            boundaryRange={0}
+                            ellipsisItem={null}
+                            firstItem={null}
+                            lastItem={null}
+                            // siblingRange={1}
+                            size="mini"
+                          />
+                        </>
+                        {/* // Homemade pagination
                         <Button
                           className="ui primary basic button"
                           title="Page précédente"
@@ -134,7 +158,7 @@ function App() {
                         >
                           Suiv.
                           <i className="angle double right icon"></i>
-                        </Button>
+                        </Button> */}
                       </div>
                     </>
                   )}
@@ -142,7 +166,6 @@ function App() {
               )
             }
           />
-
           <Route
             path="/faq"
             element={
