@@ -117,6 +117,8 @@ function App() {
                       <div className="pagination">
                         <Button
                           className="ui primary basic button"
+                          title="Page précédente"
+                          type="button"
                           onClick={() => {
                             setCurrentPage(currentPage - 1);
                           }}
@@ -126,6 +128,8 @@ function App() {
                         </Button>
                         <Button
                           className="ui primary basic button top attached"
+                          title="Page suivante"
+                          type="button"
                           onClick={() => {
                             setCurrentPage(currentPage + 1);
                           }}
