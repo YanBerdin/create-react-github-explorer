@@ -1,44 +1,41 @@
+# Github Repositories Explorer
 
-# React GitHub Explorer 
-## https://new-react-github-explorer.vercel.app/
+This is a starter template for a Github Repositories Explorer project built with **React.js**, **Semantic UI**.
 
-A Github Repository finder using React & GitHub API
+### `Demo`
+This project hosted at : https://new-react-github-explorer.vercel.app/
 
-## Objectif
+### `Prerequisites`
+Make sure you have the following installed Node.js (version >= 16.8)
 
-Faire un annuaire qui permette de chercher des repos sur github
+### `## Getting Started`
+Follow the steps below to get started with this template:
 
-Pour gagner du temps sur la mise en forme, utiliser une bibliothèque: Semantic-UI
+Clone this repository
 
-### Composants REACT à créer
+### `Navigate to the project directory:`
+```bash
+cd create-react-github-explorer
+```
 
-* SearchBar
+### `Install the dependencies using npm or Yarn:`
+```bash
+npm install
+# or
+yarn install
+```
 
-* ReposResults (pour afficher les repos correspondant à la recherche)
-
-* Message (pour afficher les erreurs et les informations)
-
-### Comportement
-
-Lorsque je submit le formulaire de recherche en appuyant sur entrer, une requête est faite pour récupérer les résultats.
-En cas de resultats, ils s'affichent sous la barre de recherche, sous forme de cartes, comme sur l'image.
-
-### Router :
-
-- Une page de recherche directement à la racine `/` qui affiche le champ de recherche et les résultats que tu viens de créer
-- Une page FAQ à l'adresse `/faq` qui affiche des questions et des réponses. Tu peux prendre les textes suivants
-- une page d'erreur si on tape une mauvaise adresse
-- un menu pour naviguer entre les pages. 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+### `Start the development server:`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes. You may also see any lint errors in the console.
+```bash
+npm start
+```
+
+
+
 
 ### `npm test`
 
