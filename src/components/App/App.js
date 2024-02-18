@@ -20,6 +20,11 @@ import Message from "../Message/Message";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+/**
+ * Represents the main component of the application.
+ * @function App
+ * @returns {JSX.Element} The JSX element representing the App component.
+ */
 function App() {
   const [repositories, setRepositories] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
@@ -33,6 +38,12 @@ function App() {
     margin: "0",
   };
 
+  /**
+   * Loads repositories from the GitHub API based on the search query and current page.
+   * @async
+   * @function loadRepositories
+   * @returns {Promise<void>}
+   */
   const loadRepositories = async () => {
     // Avant l'appel à l'API => charger les données en passant loading dans state à "true"
     setLoading(true);
@@ -48,8 +59,8 @@ function App() {
       // MAJ du Nbre de pages nécéssaires à l'affichage de tous les résultats
       // arrondi à l’entier supérieur
       setTotalPages(Math.ceil(response.data.total_count / 30));
-      console.log(totalPages);
-      console.log(response);
+      // console.log(totalPages);
+      // console.log(response);
       // console.log(response.data.items);
       // console.log(repositories);
     } catch (error) {
@@ -70,6 +81,11 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]); // Surveiller la modification de currentpage en le passant en 2eme paramètre à useEffect()
 
+  /**
+   * Handles the change of pagination.
+   * @param {Event} e - The event object.
+   * @param {Object} data - The data object containing the active page.
+   */
   const handlePaginationChange = (e, { activePage }) => {
     setCurrentPage(activePage);
   };
@@ -171,7 +187,7 @@ function App() {
             element={
               <Segment>
                 <p>A quoi ça sert ? </p>
-                <p>A explorer les repositories sur GitHub</p>
+                <p> A explorer les repositories sur GitHub</p>
                 <p>
                   En plus ils sont classés par nombre d'<span>&#11088;</span>{" "}
                 </p>
@@ -184,7 +200,7 @@ function App() {
             path="*"
             element={
               <Segment>
-                <h1>Oups, une erreur 404 : Cette page n'existe pas</h1>
+                <h1>⛔ Saperlipopette !!!  Cette page n'existe pas ⛔</h1>
               </Segment>
             }
           />

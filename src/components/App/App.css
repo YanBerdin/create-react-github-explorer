@@ -24,7 +24,13 @@
 }
 
 span {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(15, 7, 237);
   vertical-align: -10%;
+}
+
+h1 {text-align: center;}
+
+p {text-align: center;
+  font-size: 1.5rem;
 }

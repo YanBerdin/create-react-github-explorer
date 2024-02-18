@@ -3,6 +3,13 @@ import { Card, Icon, Image, Segment } from "semantic-ui-react";
 
 import "./ReposResults.css";
 
+/**
+ * Renders a list of repositories.
+ *
+ * @param {Object} props - The component props.
+ * @param {Array} props.repositories - The list of repositories to render.
+ * @returns {JSX.Element} The rendered component.
+ */
 function ReposResults({ repositories }) {
   //  console.log(repositories);
 
@@ -11,47 +18,45 @@ function ReposResults({ repositories }) {
   };
 
   return (
-    console.log(repositories),
-    (
-      <Segment style={segmentStyle}>
-        <Card.Group itemsPerRow={5} centered={true} className="CardGroup">
-          {repositories.map((repository) => (
-            <Card
-              key={repository.id}
-              raised={true}
-              color="grey"
-              href={repository.html_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="Card"
-            >
-              <Card.Content className="Content">
-                <Image
-                  // className="avatar"
-                  size="tiny"
-                  // avatar={true}
-                  floated="right"
-                  src={repository.owner.avatar_url}
-                  alt="Avatar de l'utilisateur sur Github"
-                  wrapped={false}
-                />
-                <Card.Header>{repository.name} </Card.Header>
-                <Card.Meta>
-                  <Icon name="star" /> {repository.stargazers_count}
-                </Card.Meta>
-                <Card.Meta>
-                  <Icon name="user" /> {repository.owner.login}
-                </Card.Meta>
-                <Card.Meta>{repository.owner.type}</Card.Meta>
-                <Card.Description className="Description">
-                  {repository.description}
-                </Card.Description>
-              </Card.Content>
-            </Card>
-          ))}
-        </Card.Group>
-      </Segment>
-    )
+    // console.log(repositories),
+    <Segment style={segmentStyle}>
+      <Card.Group itemsPerRow={5} centered={true} className="CardGroup">
+        {repositories.map((repository) => (
+          <Card
+            key={repository.id}
+            raised={true}
+            color="grey"
+            href={repository.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="Card"
+          >
+            <Card.Content className="Content">
+              <Image
+                // className="avatar"
+                size="tiny"
+                // avatar={true}
+                floated="right"
+                src={repository.owner.avatar_url}
+                alt="Avatar de l'utilisateur sur Github"
+                wrapped={false}
+              />
+              <Card.Header>{repository.name} </Card.Header>
+              <Card.Meta>
+                <Icon name="star" /> {repository.stargazers_count}
+              </Card.Meta>
+              <Card.Meta>
+                <Icon name="user" /> {repository.owner.login}
+              </Card.Meta>
+              <Card.Meta>{repository.owner.type}</Card.Meta>
+              <Card.Description className="Description">
+                {repository.description}
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        ))}
+      </Card.Group>
+    </Segment>
   );
 }
 

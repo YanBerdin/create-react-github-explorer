@@ -1,9 +1,26 @@
-# `Github Repositories Explorer`
+# 🔎  `GitHub Repositories Explorer` 🔍
 
-This is a starter template for a Github Repositories Explorer project built with **React.js**, **Semantic UI**.
+This is a starter template for a Github Repositories Explorer project built with **React.js** .
 
-### `Demo`
+### 🔭 `Demo`
 This project hosted at : https://new-react-github-explorer.vercel.app/
+
+### `Interactive, dynamic, and responsive integration`
+
+The application has been designed to be responsive. It adapts to different screen sizes to provide an optimal user experience on both mobile devices and desktops.
+
+### `CRUD of data from our external API`
+
+The application uses Axios to retrieve data from the external API.
+
+### 🛠️ `React Libraries`
+
+- **Axios**: Used to perform API requests
+- **Semantic UI**: Used for graphic integration in HTML and CSS
+- **Yarn**: JavaScript package manager
+- **React-router-dom**: Used to manage routing
+- **PropTypes**: Checking the data type of props
+
 
 ### `Prerequisites`
 Make sure you have the following installed Node.js.

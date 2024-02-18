@@ -8,13 +8,24 @@
   min-width: 250px;
   min-height: 300px;
   overflow: hidden;
+  animation: fadeIn 1s;
 }
 
 .Description {
   max-height: 140px;
   overflow: hidden;
 }
+
 .Content {
   max-height: 300px;
   min-height: 200px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
